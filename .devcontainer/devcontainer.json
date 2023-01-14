@@ -1,0 +1,82 @@
+{
+	"name": "Debian",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	// "runArgs": [
+	// 	"--env-file",
+	// 	".devcontainer/.env"
+	// ],
+	"overrideCommand": false,
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "v18.12.1"
+		},
+		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+	},
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"streetsidesoftware.code-spell-checker",
+		"mhutchie.git-graph",
+		"eamodio.gitlens",
+		"andys8.jest-snippets",
+		"firsttris.vscode-jest-runner",
+		"mutantdino.resourcemonitor",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"dsznajder.es7-react-js-snippets",
+		"suming.react-proptypes-generate",
+		"bradlc.vscode-tailwindcss",
+		"austenc.tailwind-docs",
+		"macieklad.tailwind-sass-syntax",
+		"csstools.postcss",
+		"heybourn.headwind"
+	],
+	"settings": {
+		"jestrunner.jestCommand": "pnpm run test run",
+		"git.enableCommitSigning": true,
+		"editor.formatOnSave": true,
+		"editor.bracketPairColorization.enabled": true,
+		"editor.guides.bracketPairs": true,
+		"editor.guides.bracketPairsHorizontal": false,
+		"editor.guides.highlightActiveBracketPair": true,
+		"editor.suggestSelection": "first",
+		"editor.inlineSuggest.enabled": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.inlayHints.enabled": "on",
+		"editor.inlayHints.fontSize": 11,
+		"editor.inlayHints.padding": true,
+		"editor.inlayHints.fontFamily": "'Fira Mono', Consolas",
+		"javascript.inlayHints.parameterNames.enabled": "all",
+		"javascript.inlayHints.parameterTypes.enabled": true,
+		"typescript.inlayHints.functionLikeReturnTypes.enabled": false,
+		"typescript.inlayHints.parameterNames.enabled": "all",
+		"typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false,
+		"typescript.preferences.quoteStyle": "single",
+		"cSpell.language": "en,en-GB",
+		"tailwindCSS.includeLanguages": {
+			"javascript": "javascript",
+			"javascriptreact": "javascriptreact",
+			"typescript": "typescript",
+			"typescriptreact": "typescriptreact",
+			"html": "HTML"
+		},
+		"headwind.classRegex": {
+			"html": "\\bclass\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\']",
+			"css": "\\B@apply\\s+([_a-zA-Z0-9\\s\\-\\:\\/]+);",
+			"javascript": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)",
+			"javascriptreact": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)",
+			"typescript": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)",
+			"typescriptreact": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)"
+		},
+		"emmet.includeLanguages": {
+			"javascript": "javascript",
+			"javascriptreact": "javascriptreact",
+			"typescript": "typescript",
+			"typescriptreact": "typescriptreact",
+			"postcss": "css"
+		},
+		"html.suggest.html5": true,
+		"reactSnippets.settings.importReactOnTop": false
+	}
+}
